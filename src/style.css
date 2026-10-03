@@ -1,0 +1,63 @@
+:root {
+  --zemin: #e9efec;
+  --kart: #fbfdfc;
+  --murekkep: #1c2a28;
+  --soluk: #5f7370;
+  --vurgu: #1f6f63;
+  --tehlike: #a8402f;
+  --cizgi: #c9d6d2;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --zemin: #141c1b;
+    --kart: #1c2827;
+    --murekkep: #e6efec;
+    --soluk: #9bb0ac;
+    --vurgu: #4fc0ad;
+    --tehlike: #e07a67;
+    --cizgi: #2e3f3d;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--zemin);
+  color: var(--murekkep);
+  font-family: "Trebuchet MS", "Segoe UI", system-ui, sans-serif;
+  line-height: 1.5;
+}
+.sayfa { max-width: 640px; margin: 0 auto; padding: 40px 16px 64px; }
+h1 { margin: 0; font-size: 2rem; letter-spacing: -0.02em; }
+.ozet { margin: 4px 0 24px; color: var(--soluk); }
+.form { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px; }
+.form input { flex: 1 1 220px; }
+input[type="text"], .form input {
+  padding: 10px 12px; border: 1px solid var(--cizgi); border-radius: 6px;
+  background: var(--kart); color: inherit; font: inherit;
+}
+button {
+  padding: 9px 14px; border: 1px solid var(--cizgi); border-radius: 6px;
+  background: var(--kart); color: inherit; font: inherit; cursor: pointer;
+}
+button:hover { border-color: var(--vurgu); }
+button.birincil { background: var(--vurgu); border-color: var(--vurgu); color: #fff; }
+button.tehlike { color: var(--tehlike); }
+button.link { border: 0; background: none; color: var(--soluk); text-decoration: underline; padding: 0; }
+:focus-visible { outline: 3px solid var(--vurgu); outline-offset: 2px; }
+.liste { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.liste li {
+  display: flex; justify-content: space-between; align-items: center; gap: 12px;
+  padding: 12px 14px; background: var(--kart);
+  border: 1px solid var(--cizgi); border-left: 4px solid var(--vurgu); border-radius: 6px;
+}
+.liste li.bitti { border-left-color: var(--cizgi); }
+.liste li.bitti span { text-decoration: line-through; color: var(--soluk); }
+.liste label { display: flex; gap: 10px; align-items: center; flex: 1; cursor: pointer; }
+.islemler { display: flex; gap: 6px; }
+.islemler button { padding: 5px 10px; font-size: 0.85rem; }
+.bilgi { color: var(--soluk); }
+.hata { color: var(--tehlike); }
+footer { margin-top: 32px; font-size: 0.85rem; }
+@media (max-width: 480px) {
+  .liste li { flex-direction: column; align-items: flex-start; }
+}
