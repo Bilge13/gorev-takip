@@ -15,3 +15,9 @@ npm run dev
 
 ## Yayın
 Netlify: build komutu `npm run build`, yayın klasörü `dist` (netlify.toml içinde tanımlı).
+
+## Ekran Görüntüsü
+
+![Görev Takip ekran görüntüsü](screenshots/ekran-goruntusu.png.png)
+
+Yayın adresi: https://gorev-takip-bilge.netlify.app
